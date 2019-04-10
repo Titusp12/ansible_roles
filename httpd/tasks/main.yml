@@ -13,3 +13,5 @@
     mode: 0766
   notify: restart httpd
 
+- include_tasks: demovar.yml
+

@@ -1,0 +1,13 @@
+---
+# tasks file for paths
+- name: Updating the Maven path
+  stat:
+    path: /etc/profile.d/maven.sh
+  register: output
+
+- name: Create the file if doesn't exist
+  template:
+    src: maven.sh
+    dest: /etc/profile.d/maven.sh
+  when: output.stat.exists == False
+

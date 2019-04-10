@@ -1,0 +1,12 @@
+---
+# tasks file for maven
+- name: Download the Maven package
+  unarchive:
+    src: "http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.6.0/binaries/apache-maven-{{version}}-bin.tar.gz"
+    dest: /opt
+    mode: 0755
+    owner: root
+    group: root
+    remote_src: yes
+
+
